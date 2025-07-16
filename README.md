@@ -18,14 +18,11 @@ A Discord bot that listens for messages starting with a configurable watch word 
    - **Keep this token secret!**
    - Paste this token into your `.env` file as `DISCORD_TOKEN`.
 
-4. **Get Your Client ID:**
-   - In the "General Information" tab, copy the "Client ID".
-   - Paste this into your `.env` file as `CLIENT_ID`.
-
-5. **Invite the Bot to Your Server:**
+4. **Invite the Bot to Your Server:**
+   - In the "General Information" tab, copy the "Client ID" (you do not need to add this to your `.env`).
    - Use the following URL, replacing `YOUR_CLIENT_ID` with your actual client ID:
      ```
-     https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot&permissions=274877990912
+     https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot&permissions=1049600
      ```
    - Open this URL in your browser, select your server, and authorize the bot.
    - The permission number above gives the bot permission to read and send messages, create threads, and manage messages. Adjust as needed for your use case.
@@ -42,16 +39,13 @@ DISCORD_TOKEN=your_discord_bot_token_here
 
 # The watch word to trigger the bot (default is '+')
 WATCH_WORD=+
-
-# Discord Application Client ID
-CLIENT_ID=your_discord_client_id_here
 ```
 
 ## How to Use
 
 1. **Add your `.env` file:**
    - Copy the example above into a file named `.env` in the project root.
-   - Fill in your Discord bot token and client ID.
+   - Fill in your Discord bot token and (optionally) change the watch word.
 
 2. **Install dependencies:**
    - Run:

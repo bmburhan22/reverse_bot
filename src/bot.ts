@@ -5,10 +5,9 @@ dotenv.config();
 
 const token = process.env.DISCORD_TOKEN;
 const watchWord = process.env.WATCH_WORD || '+';
-const clientId = process.env.CLIENT_ID;
 
-if (!token || !clientId) {
-  throw new Error('Missing DISCORD_TOKEN or CLIENT_ID in environment variables.');
+if (!token) {
+  throw new Error('Missing DISCORD_TOKEN in environment variables.');
 }
 
 const client = new Client({
