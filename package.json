@@ -1,12 +1,22 @@
 {
   "name": "reverse_bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A Discord bot that reverses messages starting with a configurable watch word.",
+  "main": "dist/bot.js",
+  "types": "dist/bot.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/bot.js",
+    "pm2": "pm2 start dist/bot.js --name reverse-bot"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.11.30",
+    "@types/ws": "^8.5.10"
+  }
 }
